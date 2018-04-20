@@ -3,8 +3,6 @@ var finsubtotal=0;
 var igv,totalpago,nuevostock;
 
 function Login(){
-    var x = document.getElementById("frame");
-    x.setAttribute('src','index_2.html');
 }
 
 

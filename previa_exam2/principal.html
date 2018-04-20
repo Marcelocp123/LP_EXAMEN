@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body id="BOD">
+	<div id="CUERPO">
+	<h3>TABLA DE REGISTROS</h3>
+	<hr>
+	<hr>
+	<div id="form">	
+	    
+		<select id="seleccionar()" class="opciones" onclick="agregar_1()">
+	    <option  disabled selected value="!--Producto-!">!--Producto-!</option>		
+		<option  id="Arroz" value-="Arroz">Arroz</option>
+		<option value="Azucar">Azucar</option>	
+		<option value="Leche">Leche</option>
+		</select>
+		<br>
+		<tr><td>
+			</td><td><input id="select" class="caja" placeholder="Producto" disabled>
+		</td>
+		</td><td><input type="text" id="precio" class="caja" placeholder="$0.00" disabled>
+		</td>
+		<td><input id="cantidad" maxlength="12" placeholder="#Cantidad" class="caja"></td>
+	    </tr>
+	    <br>
+		<button onclick="agregar();" class="boton" id="b1">Agregar</button>
+		
+		<button onclick="modificar();" class="boton" id="b2">Modificar</button>
+
+		
+
+		<table id="data">
+		<thead>
+		<tr id = "linea">
+			<th>id</th>
+			<th>Producto</th>
+			<th>Precio</th>
+			<th>Cantidad</th>
+			<th>Promedio</th>
+			<th colspan="2">Acciones</th>
+		</tr>
+		<br>
+	    </thead>
+	</table>
+	<br>
+	<br>
+	<button onclick="calcular()" class="boton">Calcular</button>
+	<hr>
+	<hr>
+	<input type="text" id="subtotal" class="caja_1" placeholder="#Subtotal">
+	<hr>
+	<hr>
+	<input type="text" id="porcentaje" class="caja_1" placeholder="16V18%">
+	<hr>
+	<hr>
+	<input type="text" id="total" class="caja_1" placeholder="#Total">
+	<br>
+	</div>
+   </div>
+   
+   <script src="js/script.js" type="text/javascript"></script>
+  </div>
+  <div id="bb"></div>
+  
+</body>
+
+</html>
