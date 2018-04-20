@@ -1,0 +1,161 @@
+*{
+	background: white;
+}
+body{
+  background: red;
+}
+#BOD{
+  background: red;
+}
+#CUERPO{
+  background: grey;
+  position: center;
+  width: 1000px;
+  
+  margin: 100px;
+  border: 2px solid #D4D7D7;
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 20px;
+}
+.opciones{
+  padding: right;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border: 2px solid #D4D7D7;
+  border-radius: 5px;
+  width: 250px;
+  height: 40px;
+  padding-left: 5px;
+}
+.caja{
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 2px solid #D4D7D7;
+  border-radius: 5px;
+  width: 250px;
+  height: 30px;
+  padding-left: 5px;
+
+}
+.caja_1{
+  position: left;
+  margin-left: 650px;
+  border: 2px solid #D4D7D7;
+  border-radius: 5px;
+  width: 250px;
+  height: 30px;
+  padding-left: 5px;  
+}
+h3{
+  text-align: center;
+  font-size: 40px;
+}
+#form{
+  font-size: 25px;
+}
+.boton{
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background: black;
+  background-color:#0D4D84; 
+  font-size: 11pt;
+  color: white;
+}
+td{
+  color: grey;
+  font-size: 15px;
+  padding-left: 15px;
+}
+th{
+   vertical-align: top;
+   border: 1px solid #D4D7D7;
+   padding-left: 45px;
+   background: #0D4D84;
+   font-family: Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+   font-size: 17px;   
+   color: white;
+}
+hr{
+  color: red;
+}
+
+$anime-time: 8s;
+
+$box-size: 200px;
+$clip-distance: .05;
+$clip-size: $box-size * (1 + $clip-distance * 2);
+$path-width: 2px;
+
+$main-color: #69ca62;
+
+$codepen-logo-path: url('//blog.codepen.io/wp-content/uploads/2012/06/Button-White-Large.png');
+
+%full-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bb {
+  @extend %full-fill;
+  width: $box-size;
+  height: $box-size;
+  margin: auto;
+  background: $codepen-logo-path no-repeat 50% / 70% rgba(#000, .1);
+  color: $main-color;
+  box-shadow: inset 0 0 0 1px rgba($main-color, .5);
+
+  &::before,
+  &::after {
+    @extend %full-fill;
+    content: '';
+    z-index: -1;
+    margin: -1 * $clip-distance * 100%;
+    box-shadow: inset 0 0 0 $path-width; 
+    animation: clipMe $anime-time linear infinite;
+  }
+
+  &::before {
+    animation-delay: $anime-time * -.5;
+  }
+
+  // for debug
+  &:hover {
+    &::after,
+    &::before {
+      background-color: rgba(#f00, .3);
+    }
+  }
+
+}
+
+@keyframes clipMe {
+  0%, 100% {clip: rect(0px, $clip-size, $path-width, 0px); }
+  25% {clip: rect(0px, $path-width, $clip-size, 0px); }
+  50% {clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0px); }
+  75% {clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width); }
+}
+
+/////
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  background-color: #0f222b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
